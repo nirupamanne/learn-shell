@@ -10,7 +10,20 @@ fi
 echo "proceeding.."
 dnf install nginx -y
 
+if [$? -ne 0 ]; then
+    echo "Nginx installation is failed"
+    exit 1
+else
+    echo "Nginx installation is success"
+fi
+
 dnf install mysql -y
 
-echo "still proceed"
+if [$? -ne 0 ]; then
+    echo "Mysql client installation is failed"
+    exit 1
+else
+    echo "Mysql installation is success"
+
+echo "still proceed..."
 
