@@ -24,6 +24,7 @@ if [$? -ne 0 ]; then
     exit 1
 else
     echo "Mysql installation is success"
+fi
 
 echo "still proceed..."
 
