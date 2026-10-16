@@ -29,3 +29,6 @@ do
     dnf install $package -y &>> $logs_file
     validate $? "Installing ${package}"
 done
+
+
+#run the command: sh 15-loops.sh nginx mysql
