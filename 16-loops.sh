@@ -31,6 +31,8 @@ do
         dnf install $package -y &>> $logs_file
         validate $? "Installing ${package}
     else
-        echo "${package} already installed ...SKIPPING"
+        echo "${package} already installed...SKIPPING"
     fi 
 done
+
+#RUN:sh 16-loops.sh nginx mysql htop
