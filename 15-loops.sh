@@ -20,6 +20,7 @@ validate(){
         exit 1
     else
         echo "${2}..SUCCESS" | tee -a $logs_file
+    fi 
 }
 
 for package in $@
