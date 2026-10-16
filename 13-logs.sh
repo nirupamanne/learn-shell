@@ -22,11 +22,12 @@ validate(){
     fi
 }
 
-echo "proceeding.."
-dnf install nginx -y
+#echo "proceeding.."
+#dnf install nginx -y
+dnf install nginx -y &>> $logs_file
 validate $? "Nginx Installation"
 
-dnf install mysql -y
+dnf install mysql -y &>> $logs_file
 validate $? "Mysql Installation"
 
 echo "Script execution completed at $(date + "%F %T")" &>> $logs_file
